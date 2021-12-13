@@ -358,6 +358,23 @@
         <command>sakura</command>
       </action>
     </keybind>
+    <keybind key="C-A-Delete">
+      <action name="Exit">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Logout</name>
+        </startupnotify>
+      </action>
+    </keybind>                 
+    <keybind key="C-S-Escape">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>SysMonitor</name>
+        </startupnotify>
+        <command>bpytop -e sakura</command>
+      </action>
+    </keybind>          
     <!-- Launch scrot when Print is pressed -->
     <keybind key="Print">
       <action name="Execute">
