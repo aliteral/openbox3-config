@@ -27,8 +27,3 @@
 
 #Dock
 (sleep 4s && plank) &
-
-#AppLauncher
-(sleep 5s && rofi) &
-
-
