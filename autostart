@@ -7,13 +7,15 @@
 (sleep 1s && hsetroot -fill Imágenes/Wallpapers/wallpaper-work.jpeg) &
 
 #Compositor
-(sleep 2s && picom -b) &
+(sleep 2s && picom -b --config ~/.config/picom/picom.conf) &
 
 #Panel
 (sleep 3s && lxpanel) &
+(sleep 3s && nm-applet) &
+(sleep 3s && pnmixer) &
 
 #NotificationDaemon
 (sleep 4s && dunst) &
 
-#Screensaver
+#Screensaver&Locker
 (sleep 5s && xscreensaver --no-splash) &
