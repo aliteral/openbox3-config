@@ -4,18 +4,21 @@
 
 
 #Wallpaper
-(sleep 1s && hsetroot -fill Imágenes/Wallpapers/wallpaper-work.jpeg) &
+(sleep 1s && hsetroot -fill ~/PATH/TO/IMAGE.jpeg) &
 
 #Compositor
-(sleep 2s && picom -b --config ~/.config/picom/picom.conf) &
+(sleep 1s && picom -b --config ~/.config/picom/picom.conf) &
 
 #Panel
-(sleep 3s && lxpanel) &
-(sleep 3s && nm-applet) &
-(sleep 3s && pnmixer) &
+(sleep 1s && tint2) &
+(sleep 1s && nm-applet) &
+(sleep 1s && pnmixer) &
 
 #NotificationDaemon
-(sleep 4s && dunst) &
+(sleep 1s && dunst) &
+
+#AppLauncher
+(sleep 1s && rofi) &
 
 #Screensaver&Locker
-(sleep 5s && xscreensaver --no-splash) &
+(sleep 1s && xscreensaver --no-splash) &
