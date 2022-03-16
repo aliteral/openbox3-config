@@ -251,7 +251,7 @@
       <action name="ToggleShowDesktop"/>
     </keybind>
     <!-- Keybindings for windows -->
-    <keybind key="A-F4">
+    <keybind key="W-S-q">
       <action name="Close"/>
     </keybind>
     <keybind key="A-Escape">
@@ -259,11 +259,13 @@
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
     </keybind>
-    <keybind key="A-space">
-      <action name="ShowMenu">
-        <menu>client-menu</menu>
-      </action>
-    </keybind>
+    <!--
+        <keybind key="A-space">
+      <action name="ShowMenu"> 
+        <menu>client-menu</menu> 
+      </action> 
+     -->
+    </keybind> 
     <!-- Keybindings for basic window tiling/snapping -->
     <keybind key="W-Up">
       <action name="ToggleMaximize"/>
@@ -362,7 +364,7 @@
           <enabled>true</enabled>
           <name>AppLauncher</name>
         </startupnotify>
-        <command>rofi -show drun -theme breeze-dracula</command>
+        <command>rofi -show drun</command>
       </action>
     </keybind>
     <keybind key="W-b">
@@ -389,6 +391,7 @@
           <enabled>true</enabled>
           <name>Logout</name>
         </startupnotify>
+        <command>obsession-logout</command>
       </action>
     </keybind>
     <keybind key="C-S-Escape">
@@ -397,7 +400,7 @@
           <enabled>true</enabled>
           <name>SysMonitor</name>
         </startupnotify>
-        <command>sakura -e bpytop</command>
+        <command>sakura -e htop</command>
       </action>
     </keybind>
     <keybind key="W-l">
