@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Dracula-withoutBorder</name>
+    <name>KvArcDark</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -58,7 +58,7 @@
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
       <name>sans</name>
-      <size>8</size>
+      <size>12</size>
       <!-- font size in points -->
       <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -120,13 +120,17 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>4</number>
+    <number>8</number>
     <firstdesk>1</firstdesk>
     <names>
       <name>Trabajo</name>
       <name>Personal</name>
       <name>Estudio</name>
       <name>SysAdmin</name>
+      <name>Programación</name>
+      <name>Mensajería</name>
+      <name>Social</name>
+      <name>Gaming</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -259,13 +263,6 @@
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
     </keybind>
-    <!--
-        <keybind key="A-space">
-      <action name="ShowMenu"> 
-        <menu>client-menu</menu> 
-      </action> 
-     -->
-    </keybind> 
     <!-- Keybindings for basic window tiling/snapping -->
     <keybind key="W-Up">
       <action name="ToggleMaximize"/>
@@ -353,7 +350,7 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>FM</name>
+          <name>FileManager</name>
         </startupnotify>
         <command>sakura -e ranger</command>
       </action>
@@ -373,7 +370,7 @@
           <enabled>true</enabled>
           <name>WebBrowser</name>
         </startupnotify>
-        <command>firefox</command>
+        <command>xxx-web-browser</command>
       </action>
     </keybind>
     <keybind key="W-t">
@@ -386,7 +383,7 @@
       </action>
     </keybind>
     <keybind key="C-A-Delete">
-      <action name="Exit">
+      <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
           <name>Logout</name>
@@ -407,7 +404,7 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Screenlock</name>
+          <name>ScreenLock</name>
         </startupnotify>
         <command>xscreensaver-command -lock</command>
       </action>
@@ -491,7 +488,7 @@
         <action name="Move"/>
       </mousebind>
       <mousebind button="Left" action="DoubleClick">
-        <action name="ToggleMaximize"/>
+        <action xmlns="http://openbox.org/3.4/rc" name="ToggleMaximize"/>
       </mousebind>
       <mousebind button="Up" action="Click">
         <action name="if">
@@ -876,7 +873,17 @@
   # end of the example
 -->
     <application class="*">
-      <decor>no</decor>
+      <decor>yes</decor>
+    </application>
+    <application name="steam">
+      <desktop>8</desktop>
+      <maximized>true</maximized>
+    </application>
+    <application name="ranger*">
+      <desktop>SysAdmin</desktop>
+      <height>50%</height>
+      <width>50%</width>
+      <maximized>true</maximized>
     </application>
   </applications>
 </openbox_config>
